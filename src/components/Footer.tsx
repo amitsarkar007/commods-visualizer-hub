@@ -59,9 +59,9 @@ const Footer = () => {
             © 2025 CommodityTracker. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-slate-400 mt-4 md:mt-0">
-            <a href="#" className="hover:text-yellow-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-yellow-400 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-yellow-400 transition-colors">Contact</a>
+            <Link to="/privacy" className="hover:text-yellow-400 transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-yellow-400 transition-colors">Terms of Service</Link>
+            <Link to="/contact" className="hover:text-yellow-400 transition-colors">Contact</Link>
           </div>
         </div>
       </div>
