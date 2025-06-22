@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
+# Commods Visualizer Hub
 
-## Project info
+A web application for visualizing commodity market data. This project allows users to view, analyze, and stay updated with the latest trends in the commodities market. It features an interactive interface with charts and detailed information for various commodities.
 
-**URL**: https://lovable.dev/projects/a0047ee8-a06c-4e15-9925-c1d685a2f6f6
+## Technologies Used
 
-## How can I edit this code?
+This project is built with a modern tech stack:
 
-There are several ways of editing your application.
+-   **Vite**: For fast development and optimized builds.
+-   **React**: For building the user interface.
+-   **TypeScript**: For static typing and improved code quality.
+-   **Tailwind CSS**: For utility-first styling.
+-   **shadcn/ui**: For a set of reusable UI components.
+-   **TanStack Query**: For efficient data fetching, caching, and state management.
+-   **Recharts**: For creating interactive charts.
+-   **React Router**: For client-side routing.
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a0047ee8-a06c-4e15-9925-c1d685a2f6f6) and start prompting.
+To get a local copy up and running, follow these simple steps.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+You need to have Node.js and npm/yarn/bun installed on your machine.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation & Setup
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1.  **Clone the repository**
+    ```sh
+    git clone https://github.com/your-username/commods-visualizer-hub.git
+    cd commods-visualizer-hub
+    ```
+    *Replace `your-username` with the actual GitHub username or organization.*
 
-Follow these steps:
+2.  **Install dependencies**
 
+    You can use your preferred package manager (npm, yarn, or bun).
+
+    Using npm:
+    ```sh
+    npm install
+    ```
+
+    Using bun:
+    ```sh
+    bun install
+    ```
+
+3.  **Run the development server**
+
+    Using npm:
+    ```sh
+    npm run dev
+    ```
+
+    Using bun:
+    ```sh
+    bun run dev
+    ```
+
+    Open the URL provided by Vite in your browser (usually `http://localhost:5173`) to see the application.
+
+## Build for Production
+
+To create a production-ready build of the application, run the following command:
+
+Using npm:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+Using bun:
+```sh
+bun run build
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This command will generate a `dist` folder in the project root containing the optimized and minified files ready for deployment.
 
-**Use GitHub Codespaces**
+## Available Scripts
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+In the project directory, you can run the following scripts:
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a0047ee8-a06c-4e15-9925-c1d685a2f6f6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+-   `npm run dev`: Runs the app in development mode with hot-reloading.
+-   `npm run build`: Builds the app for production to the `dist` folder.
+-   `npm run preview`: Serves the production build locally to preview before deployment.
+-   `npm run lint`: Lints the codebase using ESLint to identify and fix code quality issues.

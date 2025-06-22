@@ -1,7 +1,4 @@
-
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Database, Clock, Shield, Zap, Code, TrendingUp } from 'lucide-react';
 
 const ApiInfo = () => {
@@ -28,7 +25,6 @@ const ApiInfo = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Header />
       
       <main className="pt-20 pb-16">
         {/* Hero Section */}
@@ -222,7 +218,7 @@ const ApiInfo = () => {
         </section>
       </main>
 
-      <Footer />
+      
     </div>
   );
 };

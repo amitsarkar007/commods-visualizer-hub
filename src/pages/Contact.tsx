@@ -1,8 +1,5 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -24,23 +21,43 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    console.log('Contact form submitted:', data);
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
-    });
-    
-    reset();
-    setIsSubmitting(false);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/amit.sarkar007@gmail.com", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. We'll get back to you soon.",
+        });
+        reset();
+      } else {
+        const errorData = await response.json();
+        toast({
+          title: "Error sending message",
+          description: errorData.message || "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "There was a network error. Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Header />
       
       <main className="pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 py-16">
@@ -163,45 +180,11 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-                <h3 className="text-xl font-bold text-white mb-4">Connect With Us</h3>
-                <div className="space-y-4 text-slate-300">
-                  <p>Follow us on social media for updates and market insights:</p>
-                  <div className="flex space-x-4">
-                    <a 
-                      href="https://linkedin.com/in/amitsarkar007" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-yellow-400 hover:text-yellow-300"
-                    >
-                      LinkedIn
-                    </a>
-                    <a 
-                      href="https://github.com/amitsarkar007" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-yellow-400 hover:text-yellow-300"
-                    >
-                      GitHub
-                    </a>
-                    <a 
-                      href="https://x.com/amit_Sarkar007" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-yellow-400 hover:text-yellow-300"
-                    >
-                      X (Twitter)
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 };

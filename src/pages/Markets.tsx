@@ -1,7 +1,4 @@
-
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Fuel, Zap, Plane, Factory, Ship, Home, Droplets, FlameKindling, Building } from 'lucide-react';
 
 const Markets = () => {
@@ -96,9 +93,7 @@ const Markets = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Header />
-      
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <main className="pt-20 pb-16">
         {/* Hero Section */}
         <section className="px-4 py-16">
@@ -188,8 +183,6 @@ const Markets = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

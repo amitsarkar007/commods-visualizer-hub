@@ -1,16 +1,12 @@
-
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { FileText } from 'lucide-react';
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Header />
       
       <main className="pt-20 pb-16">
-        <div className="max-w-4xl mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="bg-gradient-to-r from-yellow-400 to-amber-500 p-3 rounded-full">
@@ -98,7 +94,6 @@ const Terms = () => {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 };

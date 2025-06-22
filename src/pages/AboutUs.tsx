@@ -1,14 +1,9 @@
-
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { BarChart3, TrendingUp, Globe, Users } from 'lucide-react';
 
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Header />
-      
       <main className="pt-20 pb-16">
         {/* Hero Section */}
         <section className="px-4 py-16">
@@ -97,9 +92,11 @@ const AboutUs = () => {
             <h2 className="text-3xl font-bold text-white mb-8">About the Author</h2>
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
               <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
-                <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center">
-                  <div className="text-4xl font-bold text-slate-900">AS</div>
-                </div>
+                <img
+                  src="author.jpeg"
+                  alt="Amit Sarkar"
+                  className="w-32 h-32 rounded-full object-cover"
+                />
                 <div className="text-left flex-1">
                   <h3 className="text-2xl font-bold text-white mb-4">Amit Sarkar</h3>
                   <p className="text-slate-300 mb-4">
@@ -109,9 +106,9 @@ const AboutUs = () => {
                   </p>
                   <p className="text-slate-400">
                     Learn more about Amit's work and background at{' '}
-                    <a href="https://ai-nexus.tech/about" target="_blank" rel="noopener noreferrer" 
+                    <a href="https://amitsarkar.tech" target="_blank" rel="noopener noreferrer" 
                        className="text-yellow-400 hover:text-yellow-300 transition-colors">
-                      ai-nexus.tech/about
+                      amitsarkar.tech
                     </a>
                   </p>
                 </div>
@@ -120,8 +117,6 @@ const AboutUs = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

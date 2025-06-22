@@ -1,16 +1,12 @@
-
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Shield } from 'lucide-react';
 
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Header />
       
       <main className="pt-20 pb-16">
-        <div className="max-w-4xl mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="bg-gradient-to-r from-yellow-400 to-amber-500 p-3 rounded-full">
@@ -20,7 +16,7 @@ const Privacy = () => {
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-600 bg-clip-text text-transparent mb-4">
               Privacy Policy
             </h1>
-            <p className="text-slate-300 text-lg">
+            <p className="text-sm text-slate-400">
               Last updated: January 2025
             </p>
           </div>
@@ -86,7 +82,6 @@ const Privacy = () => {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 };
