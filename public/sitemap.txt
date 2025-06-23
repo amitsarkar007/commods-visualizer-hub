@@ -1,0 +1,7 @@
+https://commods-visualizer.netlify.app/
+https://commods-visualizer.netlify.app/about
+https://commods-visualizer.netlify.app/markets
+https://commods-visualizer.netlify.app/api
+https://commods-visualizer.netlify.app/privacy
+https://commods-visualizer.netlify.app/terms
+https://commods-visualizer.netlify.app/contact 
